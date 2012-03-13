@@ -215,6 +215,11 @@ int uv_run_once(uv_loop_t* loop) {
 }
 
 
+void uv_loop_fork(uv_loop_t* loop) {
+  ev_loop_fork(loop->ev);
+}
+
+
 void uv__handle_init(uv_loop_t* loop, uv_handle_t* handle,
     uv_handle_type type) {
   loop->counters.handle_init++;

@@ -229,6 +229,12 @@ UV_EXTERN int uv_run (uv_loop_t*);
 UV_EXTERN int uv_run_once (uv_loop_t*);
 
 /*
+ * Call on any loop that you want to re-use after a fork(),
+ * even if you do not plan to use the loop in the parent.
+ */
+UV_EXTERN void uv_loop_fork(uv_loop_t*);
+
+/*
  * Manually modify the event loop's reference count. Useful if the user wants
  * to have a handle or timeout that doesn't keep the loop alive.
  */

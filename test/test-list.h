@@ -72,6 +72,7 @@ TEST_DECLARE   (timer)
 TEST_DECLARE   (timer_again)
 TEST_DECLARE   (idle_starvation)
 TEST_DECLARE   (loop_handles)
+TEST_DECLARE   (loop_fork)
 TEST_DECLARE   (get_loadavg)
 TEST_DECLARE   (ref)
 TEST_DECLARE   (idle_ref)
@@ -278,6 +279,8 @@ TASK_LIST_START
   TEST_ENTRY  (process_ref)
 
   TEST_ENTRY  (loop_handles)
+
+  TEST_ENTRY  (loop_fork)
 
   TEST_ENTRY  (async)
 

@@ -258,6 +258,11 @@ int uv_run_once(uv_loop_t* loop) {
 }
 
 
+void uv_loop_fork(uv_loop_t* loop) {
+  (void) loop;
+}
+
+
 int uv_run(uv_loop_t* loop) {
   if (pGetQueuedCompletionStatusEx) {
     UV_LOOP(loop, uv_poll_ex);
